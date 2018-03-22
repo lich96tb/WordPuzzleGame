@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Word Puzzle</string>
+    <string-array name="spinner">
+        <item>1x2</item>
+        <item>2x3</item>
+        <item>3x4</item>
+    </string-array>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent2">#abfcb2cb</color>
+    <color name="colorAccentHint">#bdf5709e</color>
+    <color name="colorDeepAccent">#be2d5e</color>
+    <color name="whiteHint">#21ffffff</color>
+    <color name="whiteHint1">#70ffffff</color>
+
+    <color name="whiteHint2">#97ffffff</color>
+
+    <color name="truePlay">#7f33ff00</color>
+    <color name="falsePlay">#c4ff0106</color>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="30dp"
+    android:gravity="center"
+    android:layout_margin="3dp"
+    android:background="@color/colorDeepAccent"
+    android:layout_height="30dp">
+
+    <TextView
+        android:padding="3dp"
+        android:background="@drawable/draw_item"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*" />
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/create_crossword_bg">
+
+    <include
+        android:id="@+id/toolbar_app"
+        layout="@layout/toolbar_app"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_app">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:mask="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/layout_create_crossword1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="500dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_app"
+            tools:context="com.example.iui.myapplication.CreateCrossWordActivity">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                mask:srcCompat="@drawable/enteranswerinthetablebelow_img" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/whiteHint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+                <LinearLayout
+                    android:id="@+id/add_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/frame_candy_img"
+                    android:gravity="center"
+                    android:orientation="vertical" />
+            </HorizontalScrollView>
+
+            <EditText
+                android:id="@+id/create_edt_name_of_game"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/draw_edt"
+                android:gravity="center"
+                android:hint="Name of the game"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/whiteHint1"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/create_edt_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/create_edt_time"
+                android:layout_width="88dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/draw_edt"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="8"
+                android:text="000000"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/whiteHint1"
+                android:textStyle="bold"
+                app:keep_hint="false"
+                app:layout_constraintBottom_toBottomOf="@+id/create_edt_name_of_game"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/create_edt_name_of_game"
+                app:layout_constraintTop_toTopOf="@+id/create_edt_name_of_game"
+                app:layout_constraintVertical_bias="1.0"
+                mask:allowed_chars="1234567890"
+                mask:mask="##:##:##" />
+
+            <TextView
+                android:id="@+id/create_time_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Time"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/create_edt_time"
+                app:layout_constraintStart_toStartOf="@+id/create_edt_time"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Name Of The Game "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/create_edt_name_of_game"
+                app:layout_constraintStart_toStartOf="@+id/create_edt_name_of_game"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/create_cross_rv"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_margin="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/suggestion_txt_crossword"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/item_create_crossword" />
+
+            <TextView
+                android:id="@+id/suggestion_txt_crossword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/draw_edt_white"
+                android:padding="5dp"
+                android:text="Suggestion"
+                android:textColor="@color/whiteHint1"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/create_edt_name_of_game" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
